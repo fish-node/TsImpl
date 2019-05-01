@@ -1,4 +1,5 @@
-// 对函数 参数 返回值 的 类型进行校验
+// 对函数的 参数和返回值 的类型进行校验
+
 function sum(arr: Array<number>): number{
   let sum = 0;
   arr.forEach(element => {
@@ -7,3 +8,7 @@ function sum(arr: Array<number>): number{
   return sum
 }
 sum([1,2,3,4]);
+
+
+let add: (a: number, b: number) => number;
+
