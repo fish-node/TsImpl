@@ -14,3 +14,14 @@ function addNumber2(baseValue: number, inc= 0): number{
     return baseValue + inc;
 }
 numb = addNumber2(numb);
+
+
+function asssertNotNull(isExist: boolean, optional?: string, ){
+    // Error: 这个可能是为null
+    // optional.length;
+
+    if (isExist){
+        // 非空断言
+        optional!.length;
+    }
+}
