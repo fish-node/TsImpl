@@ -29,7 +29,7 @@ let p2: ChineseManInterface = {
 
 
 
-// 没太大意义，占时不管
+// 没太大意义，暂时不管
 
 class Monkey{
     public name: string;

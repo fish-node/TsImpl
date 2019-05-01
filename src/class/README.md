@@ -1,14 +1,28 @@
-## 权限
-Public (default), private, and protected modifiers
+# 基于类的面对对象
+
+### 访问权限
+- public (default)
+
+  全局可见
+  
+- protected
+
+  子类可见
+  
+- private
+
+  当前类可见
+  
 编译阶段的访问权限检查
 
-## readonly
-编译阶段检查，禁止写操作
+### readonly
+同时支持readonly作为属性修饰符
 
-## static
-数据存储在类对象上面。
+### static
+类的静态方法。
+编译后存储在类对象上面。
 
-其实也可以用闭包，让这种数据只能被构造函数和类方法引用
 
-## Abstract Classes
-can not be new.
+## 继承
+
+## 访问属性
