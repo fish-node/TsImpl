@@ -1,16 +1,19 @@
-class Animal{
-    run(){
+class Animal {
+    public run() {
         console.log("I am running....");
     }
 }
 
-class Horse extends Animal{
-    run(){
+// tslint:disable-next-line:max-classes-per-file
+class Horse extends Animal {
+    public run() {
         super.run();
-        console.log("咩。。")
+        console.log("咩。。");
     }
 }
 
 let horse: Horse = new Horse();
 
 horse.run();
+// I am running....
+// 咩。。

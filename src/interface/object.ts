@@ -5,6 +5,7 @@
 //   是否可读的？
 
 // 可选属性
+// tslint:disable-next-line:interface-name
 interface Config1 {
     color?: string;
     width?: number;

@@ -1,5 +1,5 @@
-class Sheep{
-    static count: number;
+class Sheep {
+    public static count: number;
 }
 
 let sheep: Sheep = new Sheep();

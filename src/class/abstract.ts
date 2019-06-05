@@ -1,8 +1,10 @@
-abstract class God{
-    abstract createWorld(): void;
+abstract class God {
+    public abstract createWorld(): void;
 }
 
-class MieGod extends God{
-    createWorld(): void {
+// tslint:disable-next-line:max-classes-per-file
+class MieGod extends God {
+    public createWorld(): void {
+        console.log("world is created");
     }
 }
