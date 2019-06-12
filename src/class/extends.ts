@@ -12,7 +12,7 @@ class Horse extends Animal {
     }
 }
 
-let horse: Horse = new Horse();
+const horse: Horse = new Horse();
 
 horse.run();
 // I am running....

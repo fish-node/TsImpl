@@ -1,60 +1,57 @@
-// 用来约束一个对象的结构
-//   有哪些必有的属性，以及它们的类型？
-//   有哪些可选的属性？
-//   有哪些方法？
-//   是否可读的？
+/**
+ * 用来约束一个对象的结构
+ *   - 有哪些必有的属性，以及它们的类型？
+ *   - 有哪些可选属性？
+ *   - 有哪些方法？
+ *   - 是否可读的？
+ */
 
-// 可选属性
-// tslint:disable-next-line:interface-name
-interface Config1 {
-    color?: string;
-    width?: number;
+/**
+ * name不能为空
+ * age可以为空
+ * 不能有其他属性
+ */
+interface IUser {
+    name: string;
+    age?: number;
 }
 
-let conf1: Config1 = {
-    color: "white",
+let Jon: IUser = {
+    name: "Jon Snow",
+};
 
-    // 除了上面两个属性，不能有其他额外属性
-    // color2: "red"
-}
-
-// [] 标注的是特殊的
-// [propName: string]: string;
-//    表明这个对象的key是string， value是string
-
-//  为了避免冲突，它不能有   color?: string; width?: number;
-//      因为 color是 string\ undefined,  width是 number|undefined类型
-interface Config2{
+/**
+ * []: 属性签名
+ *
+ * [propName: string]: string;
+ * 表明这个对象的key是string，值是string
+ *
+ * 这样这个对象就可以有任意多个属性
+ */
+interface IConfig {
     [propName: string]: string;
     color: string;
 }
 
-let conf2: Config2 = {
+let conf: IConfig = {
     color: "red",
-    name: "name"
-}
+    name: "name",
+    s: "sdf",
+};
 
-
-interface CatInterface {
+/**
+ * readonly: 自读属性
+ */
+interface ICat {
     // 自读属性
     readonly name: string;
     readonly age: number;
-    readonly run: () => void;
-
-    // 方法格式
-    getName?: (name: string) => void;
 }
 
-function run(cat: CatInterface): void{
-    cat.run()
-}
-let cat = {
-    name: 'Bob',
-    age: 22,
-    run: function(): void{
-        console.log(this.name + ' running.')
-    }
-}
-// cat不是被接口约束的，所以可以修改
-cat.name = 'Jon';
-run(cat)
+let cat: ICat = {
+    name: "Tom",
+    age: 73,
+};
+
+// 不能修改
+// cat.name = 3

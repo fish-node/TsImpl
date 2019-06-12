@@ -1,9 +1,9 @@
 /// <reference path="util.ts" />
 
-namespace util{
-  export function hi(){
-    console.log('hi')
+namespace util {
+  export function hi() {
+    console.log("hi");
   }
 }
-util.hi()
-util.hel()
+util.hi();
+util.hel();

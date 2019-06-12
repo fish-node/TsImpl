@@ -1,5 +1,5 @@
 /**
- * 类也是对象，可以有ES6规定的访问属性
+ * 类也是对象，可以使用ES6规定的访问属性
  *   类似于Java的setter getter方法
  */
 
@@ -18,7 +18,8 @@ class BlackWalker {
         this.lastName = names[1];
     }
 }
-let walker: BlackWalker = new BlackWalker();
+
+const walker: BlackWalker = new BlackWalker();
 
 walker.fullName = "Jon Snow";
 console.log(walker.firstName);

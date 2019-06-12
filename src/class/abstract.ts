@@ -1,3 +1,7 @@
+/**
+ * 使用抽象类: 面对抽象编程
+ */
+
 abstract class God {
     public abstract createWorld(): void;
 }

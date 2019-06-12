@@ -7,24 +7,24 @@
 function logger(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
     console.log("logger some message");
 
-    console.log(target["name"] + ": 吃东西了")
-    console.log(target)
+    console.log(target.name + ": 吃东西了");
+    console.log(target);
 
-    console.log(propertyKey)
+    console.log(propertyKey);
 
-    console.log(descriptor)
+    console.log(descriptor);
 }
 
 class Rabbit {
-    name: string;
+    public name: string;
 
-    constructor(name: string){
+    constructor(name: string) {
         this.name = name;
     }
 
     @logger
-    eat() {
-        console.log(this.name + ": 真好吃")
+    public eat() {
+        console.log(this.name + ": 真好吃");
     }
 }
 
