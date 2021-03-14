@@ -3,8 +3,12 @@
  */
 
 class Sheep {
-    public static count: number;
+    public static count: number = 0;
+    constructor() {
+        Sheep.count++
+    }
 }
 
-let sheep: Sheep = new Sheep();
-Sheep.count = 3;
+let sheep = new Sheep();
+
+console.log(Sheep.count)

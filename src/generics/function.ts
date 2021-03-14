@@ -1,24 +1,13 @@
 /**
  * 函数泛型
+ *   类型也可以理解为一个参数
  */
 
-function addT<T>(a: T, b: T): T {
-  // 必须把参数当做任意类型，
-  //    .length 未必存在
-  //    + 未必合法
-
-  // return a + b
-  // Operator '+' cannot be applied to types 'T' and 'T'
-
+function add<T>(a: T, b: T): T {
   return a;
 }
 
-let n1 = addT<number>(1, 2);
+console.log( add<number>(1, 2))
 
-let s1 = addT("hello ", "world");
-
-function getLength<T>(args: T[]): number {
-  return args.length;
-}
-
-let l1 = getLength<number>([1, 2, 3]);
+// 编译器报错，类型不匹配
+console.log( add<string>("a", 3))
